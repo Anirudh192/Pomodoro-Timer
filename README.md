@@ -1,67 +1,77 @@
-# 🍅 Pomodoro Timer
+<h1 align="center">🍅 Pomodoro Timer</h1>
+<p align="center">⏳ Boost your productivity with a clean, customizable Pomodoro Timer built with React, TypeScript, and Tailwind CSS.</p>
 
-A modern, feature-rich Pomodoro Timer application built with React, TypeScript, and Tailwind CSS. This timer helps you boost productivity using the Pomodoro Technique with customizable sessions, progress tracking, and a clean, intuitive interface.
+<p align="center">
+  <img src="https://img.shields.io/badge/status-active-brightgreen?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/react-18-blue?style=for-the-badge&logo=react" />
+  <img src="https://img.shields.io/badge/tailwindcss-3-38b2ac?style=for-the-badge&logo=tailwind-css" />
+  <img src="https://img.shields.io/badge/zustand-state-yellow?style=for-the-badge" />
+</p>
+
+---
 
 ## ✨ Features
 
-- **Timer Functionality**
-  - 25-minute work sessions
-  - 5-minute short breaks
-  - 15-minute long breaks (after 4 work sessions)
-  - Visual progress ring with countdown display
+### ⏱️ Timer Functionality
+- 🕒 25-minute work sessions
+- 🛌 5-minute short breaks
+- 🌙 15-minute long breaks (after 4 work sessions)
+- 🔄 Visual progress ring with countdown
 
-- **Session Management**
-  - Automatic session switching
-  - Session history tracking
-  - Completed sessions counter
-  - Current session type indicator
+### 🔁 Session Management
+- 🔃 Auto session switching
+- 📈 Session history tracking
+- ✅ Completed session counter
+- 🔍 Session type indicator
 
-- **User Interface**
-  - Modern, responsive design
-  - Dark theme with clean aesthetics
-  - Settings modal for customization
-  - Visual progress indicators
+### 🧑‍🎨 User Interface
+- 🌗 Dark, minimalist design
+- ⚙️ Settings modal for preferences
+- 📊 Visual session indicators
+- 📱 Responsive UI
 
-- **Customization**
-  - Adjustable session durations
-  - Auto-start next session option
-  - Session logging and history
+### 🧩 Customization
+- ✏️ Editable session durations
+- 🚀 Auto-start next session toggle
+- 📚 Session logging
+
+---
 
 ## 🚀 Getting Started
 
-### Prerequisites
-
+### 🔧 Prerequisites
 - Node.js (v16 or higher)
 - npm or yarn
 
-### Installation
+### 🧪 Installation
 
-1. Clone the repository:
 ```bash
+# 1. Clone the repository
 git clone https://github.com/Anirudh192/Pomodoro-Timer.git
 cd Pomodoro-Timer
-```
 
-2. Install dependencies:
-```bash
+# 2. Install dependencies
 npm install
-```
 
-3. Start the development server:
-```bash
+# 3. Start development server
 npm run dev
 ```
 
-4. Open your browser and navigate to `http://localhost:5173`
+Open your browser at: [http://localhost:5173](http://localhost:5173)
 
-## 🛠️ Built With
+---
 
-- **React** - Frontend framework
-- **TypeScript** - Type safety and better development experience
-- **Tailwind CSS** - Utility-first CSS framework
-- **Zustand** - State management
-- **Vite** - Build tool and development server
-- **react-circular-progressbar** - Progress ring component
+## 🧱 Tech Stack
+
+| Category        | Tools                              |
+|----------------|-------------------------------------|
+| 💻 Frontend     | React + TypeScript                  |
+| 🎨 Styling      | Tailwind CSS                        |
+| 🧠 State Mgmt   | Zustand                             |
+| ⚙️ Build Tool   | Vite                                |
+| 🔄 Components   | react-circular-progressbar          |
+
+---
 
 ## 📁 Project Structure
 
@@ -69,71 +79,81 @@ npm run dev
 src/
 ├── components/
 │   ├── Controls.tsx          # Timer control buttons
-│   ├── ProgressRing.tsx      # Circular progress indicator with timer display
-│   ├── SessionHistory.tsx    # Session tracking component
-│   ├── SessionInfo.tsx       # Session information display
-│   ├── SettingsModal.tsx     # Settings configuration
-│   └── Timer.tsx             # Main timer component
+│   ├── ProgressRing.tsx      # Circular progress indicator
+│   ├── SessionHistory.tsx    # Session tracker
+│   ├── SessionInfo.tsx       # Session display
+│   ├── SettingsModal.tsx     # Customization modal
+│   └── Timer.tsx             # Main timer
 ├── store/
-│   └── timerStore.ts         # Zustand state management
-├── App.tsx                   # Main application component
+│   └── timerStore.ts         # Zustand store
+├── App.tsx                   # App root
 ├── index.css                 # Global styles
-└── main.tsx                  # Application entry point
+└── main.tsx                  # Entry point
 ```
-
-## 🎯 How to Use
-
-1. **Start a Session**: Click the "Start" button to begin a 25-minute work session
-2. **Take Breaks**: After each work session, the timer automatically switches to a break
-3. **Track Progress**: Monitor your completed sessions in the session counter
-4. **View Progress**: Watch the circular progress ring fill up as time progresses
-5. **Customize Settings**: Click the settings button to adjust session durations
-6. **View History**: Check your session history to track productivity
-
-## 🎨 Progress Ring Component
-
-The `ProgressRing` component features:
-- **Dynamic Progress Calculation**: Shows progress based on session type and remaining time
-- **Session-Aware Timing**: 
-  - Work sessions: 25 minutes (1500 seconds)
-  - Short breaks: 5 minutes (300 seconds)
-  - Long breaks: 15 minutes (900 seconds)
-- **Visual Design**:
-  - Cyan progress path (`#22d3ee`)
-  - Dark gray trail (`#1f2937`)
-  - White text display
-  - 192px × 192px responsive size
-- **Time Display**: MM:SS format with zero-padding for consistent appearance
-
-## ⚙️ Configuration
-
-The timer comes with default settings:
-- Work sessions: 25 minutes
-- Short breaks: 5 minutes
-- Long breaks: 15 minutes
-- Long break after: 4 work sessions
-
-You can customize these durations through the settings modal.
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 🙏 Acknowledgments
-
-- Inspired by the Pomodoro Technique developed by Francesco Cirillo
-- Built with modern React development practices
-- Icons and design inspired by minimalist productivity apps
-- Progress visualization powered by react-circular-progressbar
 
 ---
 
-**Happy focusing! 🍅**
+## 🎯 How to Use
+
+1. ▶️ Click **Start** to begin a 25-minute session
+2. 🛑 Timer auto-switches to break after each work session
+3. 🔄 Repeat to build up session streaks
+4. 🎨 Track progress via circular timer
+5. ⚙️ Customize durations in **Settings**
+6. 📈 View session history for insights
+
+---
+
+## 🎨 Progress Ring Details
+
+- 🧠 Session-aware timing (25/5/15 mins)
+- 🌈 Colorful progress bar (`#22d3ee` cyan)
+- 🌑 Trail stroke (`#1f2937` dark gray)
+- ⌛ Displays MM:SS format with padding
+- 📏 Size: 192px × 192px (responsive)
+
+---
+
+## ⚙️ Default Configuration
+
+- ⏱ Work: 25 mins  
+- 🌴 Short Break: 5 mins  
+- 🌙 Long Break: 15 mins  
+- 🔄 Long break after: 4 work sessions  
+
+Customizable via settings modal.
+
+---
+
+## 🤝 Contributing
+
+1. 🍴 Fork the repo  
+2. 🌿 Create a branch: `git checkout -b feature/AmazingFeature`  
+3. ✅ Commit: `git commit -m 'Add AmazingFeature'`  
+4. 🚀 Push: `git push origin feature/AmazingFeature`  
+5. 🔁 Submit a PR
+
+---
+
+## 📝 License
+
+Released under the [MIT License](LICENSE).
+
+---
+
+## 🙏 Acknowledgments
+
+- 🎓 Inspired by the **Pomodoro Technique** by Francesco Cirillo  
+- 💡 Built with modern frontend tools and patterns  
+- 📦 Progress visuals powered by **react-circular-progressbar**  
+- 🎨 UI inspired by minimalist productivity apps
+
+---
+
+## 💻 Demo
+
+> Coming soon! 🚧
+
+---
+
+<p align="center"><strong>Stay focused, stay sharp! 🍅</strong></p>
